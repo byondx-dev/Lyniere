@@ -1,0 +1,246 @@
+@import "tailwindcss";
+
+/* Lynière Design System - Awwwards-Winning Futuristic Aesthetic */
+
+:root {
+  /* Color Palette - Dark & Cinematic */
+  --color-onyx: #0a0a0a;
+  --color-obsidian: #0d0d0d;
+  --color-graphite: #1a1a1a;
+  --color-charcoal: #222222;
+  
+  /* Metallic Accents */
+  --color-platinum: #e5e5e5;
+  --color-silver: #c0c0c0;
+  --color-champagne: #f7e7ce;
+  --color-gold: #d4af37;
+  
+  /* Ambient Light Colors */
+  --color-ice-blue: #a8d8ea;
+  --color-neon-blue: #00d4ff;
+  --color-kelvin-white: #f8f9fb;
+  --color-glow-blue: rgba(0, 212, 255, 0.15);
+  
+  /* Glass & Transparency */
+  --glass-bg: rgba(255, 255, 255, 0.02);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-blur: 24px;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 6rem;
+  --spacing-2xl: 8rem;
+  
+  /* Typography Scale */
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Dark Theme (Default) */
+[data-theme="dark"] {
+  --color-bg-primary: #0a0a0a;
+  --color-bg-secondary: #0d0d0d;
+  --color-bg-tertiary: #1a1a1a;
+  
+  --color-text-primary: #e5e5e5;
+  --color-text-secondary: #808080;
+  --color-text-muted: #606060;
+  
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-accent: #00d4ff;
+  
+  --glass-bg: rgba(255, 255, 255, 0.02);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  
+  --ambient-glow-1: rgba(0, 212, 255, 0.03);
+  --ambient-glow-2: rgba(247, 231, 206, 0.02);
+}
+
+/* Light Theme */
+[data-theme="light"] {
+  --color-bg-primary: #e8f1f5;
+  --color-bg-secondary: #f0f7fa;
+  --color-bg-tertiary: #d8e9f0;
+  
+  --color-text-primary: #1a3540;
+  --color-text-secondary: #4a6b7a;
+  --color-text-muted: #7a96a3;
+  
+  --color-border: rgba(168, 216, 234, 0.2);
+  --color-accent: #4a9fbe;
+  
+  --glass-bg: rgba(240, 247, 250, 0.8);
+  --glass-border: rgba(168, 216, 234, 0.3);
+  
+  --ambient-glow-1: rgba(168, 216, 234, 0.15);
+  --ambient-glow-2: rgba(74, 159, 190, 0.08);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    @apply antialiased;
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+    cursor: none;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-size: clamp(3.5rem, 12vw, 12rem);
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    color: var(--color-text-primary);
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 8vw, 8rem);
+    line-height: 1;
+    letter-spacing: -0.01em;
+    color: var(--color-text-primary);
+  }
+
+  h3 {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 4vw, 4rem);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    color: var(--color-text-primary);
+  }
+
+  h4 {
+    font-family: var(--font-display);
+    font-size: clamp(1.25rem, 2vw, 2rem);
+    line-height: 1.2;
+    letter-spacing: 0;
+    color: var(--color-text-secondary);
+  }
+
+  p {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+    color: var(--color-text-secondary);
+  }
+
+  a {
+    @apply transition-all duration-300;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .glow-text {
+    text-shadow: 0 0 20px var(--color-glow-blue),
+                 0 0 40px var(--color-glow-blue);
+  }
+  
+  .ambient-glow {
+    box-shadow: 0 0 60px var(--ambient-glow-1),
+                0 0 120px var(--ambient-glow-1);
+  }
+  
+  .text-gradient-platinum {
+    background: linear-gradient(135deg, var(--color-text-primary) 0%, var(--color-text-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #f7e7ce 0%, #d4af37 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .border-glow {
+    border: 1px solid var(--color-border);
+    box-shadow: 0 0 20px var(--ambient-glow-1),
+                inset 0 0 20px var(--ambient-glow-1);
+  }
+  
+  .container-luxury {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-left: clamp(2rem, 8vw, 8rem);
+    padding-right: clamp(2rem, 8vw, 8rem);
+  }
+  
+  .floating {
+    animation: floating 6s ease-in-out infinite;
+  }
+  
+  .floating-delayed {
+    animation: floating 8s ease-in-out infinite;
+    animation-delay: 1s;
+  }
+  
+  @keyframes floating {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(2deg); }
+  }
+  
+  .text-stroke {
+    -webkit-text-stroke: 1px var(--color-border);
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .text-stroke-fill {
+    -webkit-text-stroke: 2px var(--color-accent);
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection Styling */
+::selection {
+  background: var(--ambient-glow-1);
+  color: var(--color-text-primary);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-bg-tertiary);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* Hide default cursor for custom cursor */
+* {
+  cursor: none !important;
+}
