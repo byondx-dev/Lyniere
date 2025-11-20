@@ -1,7 +1,7 @@
 
  # LYNIERE
 
- Futuristische, animierte Smart-Home-Landingpage als Single-Page-React-App. Das Repo spiegelt das Figma-Design (https://www.figma.com/design/7WIwIEVGnaJS0fVP6DXNNY/LYNIERE) in Code und nutzt Vite + Tailwind v4 + Framer Motion.
+ Futuristische, animierte Smart-Home-Landingpage als Single-Page-React-App. Nutzt Vite + Tailwind v4 + Framer Motion.
 
  ## Schnellstart
  - Voraussetzungen: Node 18+ und npm.
