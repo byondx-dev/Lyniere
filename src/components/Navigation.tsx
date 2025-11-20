@@ -45,7 +45,7 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
               whileHover={{ 
                 scale: 1.05 
               }}
-              className="text-xs tracking-wider transition-all duration-300 px-4 py-1.5 rounded-full relative"
+              className="text-sm md:text-base font-bold tracking-wide transition-all duration-300 px-4 py-1.5 rounded-full relative"
               style={{ 
                 color: currentPage === item.page ? 'var(--color-bg-primary)' : 'var(--color-text-primary)',
                 backgroundColor: currentPage === item.page ? 'var(--color-text-primary)' : 'transparent'
