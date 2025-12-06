@@ -23,7 +23,7 @@ export function ModernHero({ onNavigate }: ModernHeroProps) {
     <section ref={containerRef} className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background Images */}
       <AnimatedBackground />
-      
+
       {/* Technical Architectural Drawings */}
       <TechnicalDrawing />
 
@@ -36,7 +36,7 @@ export function ModernHero({ onNavigate }: ModernHeroProps) {
           const randomY = Math.random() * 100;
           const randomSize = 1 + Math.random() * 3;
           const moveRange = 50 + Math.random() * 100;
-          
+
           return (
             <motion.div
               key={i}
@@ -69,7 +69,7 @@ export function ModernHero({ onNavigate }: ModernHeroProps) {
       </div>
 
       {/* Hero Content */}
-      <motion.div 
+      <motion.div
         style={{ opacity, scale, y }}
         className="relative z-10 text-center"
       >
@@ -96,7 +96,7 @@ export function ModernHero({ onNavigate }: ModernHeroProps) {
                 transition={{ delay: 1.4, duration: 1, ease: [0.76, 0, 0.24, 1] }}
                 className="block text-stroke-fill"
               >
-                LUXURY
+                Smart Home
               </motion.span>
             </h1>
           </motion.div>
@@ -163,10 +163,10 @@ export function ModernHero({ onNavigate }: ModernHeroProps) {
 
       {/* Grid overlay */}
       <div className="absolute inset-0 opacity-[0.02] pointer-events-none"
-           style={{
-             backgroundImage: 'linear-gradient(var(--color-border) 1px, transparent 1px), linear-gradient(90deg, var(--color-border) 1px, transparent 1px)',
-             backgroundSize: '100px 100px'
-           }}
+        style={{
+          backgroundImage: 'linear-gradient(var(--color-border) 1px, transparent 1px), linear-gradient(90deg, var(--color-border) 1px, transparent 1px)',
+          backgroundSize: '100px 100px'
+        }}
       />
     </section>
   );

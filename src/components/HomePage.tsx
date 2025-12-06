@@ -3,6 +3,7 @@ import { TextReveal } from "./TextReveal";
 import { RoundCards } from "./RoundCards";
 import { LuxurySlider } from "./LuxurySlider";
 import { DynamicFeatures } from "./DynamicFeatures";
+import { ArchitecturalDetails } from "./ArchitecturalDetails";
 import { HorizontalTimeline } from "./HorizontalTimeline";
 import { FloatingShowcase } from "./FloatingShowcase";
 import { MinimalGallery } from "./MinimalGallery";
@@ -19,6 +20,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <RoundCards onNavigate={onNavigate} />
       <LuxurySlider />
       <DynamicFeatures />
+      <ArchitecturalDetails />
       <HorizontalTimeline />
       <FloatingShowcase />
       <MinimalGallery />

@@ -13,17 +13,17 @@ const smartHomeConcepts = [
     price: "€22,900",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1747224317348-887f7ed01d34?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbWFydCUyMHRoZXJtb3N0YXQlMjBtaW5pbWFsJTIwZGVzaWdufGVufDF8fHx8MTc2MzM3NDA1N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+        url: "SECTION_PLACEHOLDER",
         type: "interface" as const,
         caption: "Smart energy management system"
       },
       {
-        url: "https://images.unsplash.com/photo-1713857297379-6fc26e70f581?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbWFydCUyMGxpZ2h0aW5nJTIwc3lzdGVtJTIwbW9kZXJufGVufDF8fHx8MTc2MzM3NDA1NXww&ixlib=rb-4.1.0&q=80&w=1080",
+        url: "SECTION_PLACEHOLDER",
         type: "hardware" as const,
         caption: "Solar-powered LED system"
       },
       {
-        url: "https://images.unsplash.com/photo-1614801502766-e2562eb626d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0YWJsZXQlMjBob21lJTIwYXV0b21hdGlvbiUyMGFwcHxlbnwxfHx8fDE3NjMzNzQwNTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+        url: "SECTION_PLACEHOLDER",
         type: "interface" as const,
         caption: "Real-time carbon tracking dashboard"
       }
@@ -58,17 +58,17 @@ const smartHomeConcepts = [
     price: "€34,900",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1760276141897-de770ebf5bcc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxob21lJTIwc2VjdXJpdHklMjBjYW1lcmElMjBtb2Rlcm58ZW58MXx8fHwxNzYzMzc0MDU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+        url: "SECTION_PLACEHOLDER",
         type: "hardware" as const,
         caption: "AI-powered security cameras"
       },
       {
-        url: "https://images.unsplash.com/photo-1717323454555-f053c31ff4b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbWFydCUyMGhvbWUlMjBjb250cm9sJTIwcGFuZWx8ZW58MXx8fHwxNzYzMzIxNTQ0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+        url: "SECTION_PLACEHOLDER",
         type: "interface" as const,
         caption: "Security command center"
       },
       {
-        url: "https://images.unsplash.com/photo-1761167899925-33ee9a55f9db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBob21lJTIwdGVjaG5vbG9neSUyMHNsZWVrfGVufDF8fHx8MTc2MzM3NDA1OXww&ixlib=rb-4.1.0&q=80&w=1080",
+        url: "SECTION_PLACEHOLDER",
         type: "hardware" as const,
         caption: "Biometric access control"
       }
@@ -103,17 +103,17 @@ const smartHomeConcepts = [
     price: "€42,900",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1759505017950-25e0733b9e68?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwdGVjaG5vbG9neSUyMGludGVyZmFjZXxlbnwxfHx8fDE3NjMzNzQwNTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+        url: "SECTION_PLACEHOLDER",
         type: "interface" as const,
         caption: "Family dashboard with individual profiles"
       },
       {
-        url: "https://images.unsplash.com/photo-1614801502766-e2562eb626d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0YWJsZXQlMjBob21lJTIwYXV0b21hdGlvbiUyMGFwcHxlbnwxfHx8fDE3NjMzNzQwNTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+        url: "SECTION_PLACEHOLDER",
         type: "interface" as const,
         caption: "Mobile control for all family members"
       },
       {
-        url: "https://images.unsplash.com/photo-1702351002798-6ccc7598494a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhaSUyMGFzc2lzdGFudCUyMHNwZWFrZXIlMjBtaW5pbWFsfGVufDF8fHx8MTc2MzM3NDA1N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+        url: "SECTION_PLACEHOLDER",
         type: "hardware" as const,
         caption: "Voice assistants in every room"
       }
@@ -148,17 +148,17 @@ const smartHomeConcepts = [
     price: "€89,900",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1762500825366-ba34b0c5352e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmdXR1cmlzdGljJTIwaG9tZSUyMGF1dG9tYXRpb258ZW58MXx8fHwxNzYzMzc0MDU1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+        url: "SECTION_PLACEHOLDER",
         type: "interface" as const,
         caption: "Complete system integration"
       },
       {
-        url: "https://images.unsplash.com/photo-1568842293346-22b714e801f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbWFydCUyMGh1YiUyMGRldmljZSUyMG1pbmltYWx8ZW58MXx8fHwxNzYzMzc0MDU4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+        url: "SECTION_PLACEHOLDER",
         type: "hardware" as const,
         caption: "Central quantum hub"
       },
       {
-        url: "https://images.unsplash.com/photo-1759505017950-25e0733b9e68?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwdGVjaG5vbG9neSUyMGludGVyZmFjZXxlbnwxfHx8fDE3NjMzNzQwNTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+        url: "SECTION_PLACEHOLDER",
         type: "interface" as const,
         caption: "Master control interface"
       }
@@ -210,13 +210,13 @@ export function HomesPage({ onNavigate }: HomesPageProps) {
 
         {/* Header */}
         <div className="mb-20 lg:mb-32">
-          <span 
+          <span
             className="text-xs tracking-[0.4em] uppercase block mb-6"
             style={{ color: 'var(--color-text-muted)' }}
           >
             Our Collections
           </span>
-          
+
           <h1 className="text-5xl lg:text-7xl mb-8">
             Smart Home
             <span className="block" style={{ color: 'var(--color-accent)' }}>Systems</span>
@@ -263,7 +263,7 @@ export function HomesPage({ onNavigate }: HomesPageProps) {
             {/* Cards Container */}
             <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 relative">
               {/* Connecting Line (Desktop only) */}
-              <div 
+              <div
                 className="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-px h-32 z-0"
                 style={{
                   background: 'linear-gradient(to bottom, transparent, var(--color-accent)40, transparent)',
@@ -286,7 +286,7 @@ export function HomesPage({ onNavigate }: HomesPageProps) {
                 }}
               >
                 {/* Gradient overlay on hover */}
-                <div 
+                <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                   style={{
                     background: `radial-gradient(circle at 50% 0%, var(--color-accent)08, transparent 70%)`,
@@ -343,7 +343,7 @@ export function HomesPage({ onNavigate }: HomesPageProps) {
                         viewport={{ once: true }}
                         className="flex items-center gap-3"
                       >
-                        <div 
+                        <div
                           className="w-5 h-5 rounded-full flex items-center justify-center shrink-0"
                           style={{ backgroundColor: 'var(--color-accent)20' }}
                         >
@@ -357,7 +357,7 @@ export function HomesPage({ onNavigate }: HomesPageProps) {
                   </div>
 
                   {/* Timeline Badge */}
-                  <div 
+                  <div
                     className="inline-flex items-center gap-2 px-4 py-2 rounded-full"
                     style={{
                       backgroundColor: 'var(--color-bg-primary)40',
@@ -372,7 +372,7 @@ export function HomesPage({ onNavigate }: HomesPageProps) {
                 </div>
 
                 {/* Corner Accent */}
-                <div 
+                <div
                   className="absolute top-0 right-0 w-32 h-32 opacity-20 pointer-events-none"
                   style={{
                     background: `radial-gradient(circle at top right, var(--color-accent), transparent)`,
@@ -396,7 +396,7 @@ export function HomesPage({ onNavigate }: HomesPageProps) {
                 }}
               >
                 {/* Gradient overlay on hover */}
-                <div 
+                <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                   style={{
                     background: `radial-gradient(circle at 50% 0%, var(--color-accent)08, transparent 70%)`,
@@ -453,7 +453,7 @@ export function HomesPage({ onNavigate }: HomesPageProps) {
                         viewport={{ once: true }}
                         className="flex items-center gap-3"
                       >
-                        <div 
+                        <div
                           className="w-5 h-5 rounded-full flex items-center justify-center shrink-0"
                           style={{ backgroundColor: 'var(--color-accent)20' }}
                         >
@@ -467,7 +467,7 @@ export function HomesPage({ onNavigate }: HomesPageProps) {
                   </div>
 
                   {/* Timeline Badge */}
-                  <div 
+                  <div
                     className="inline-flex items-center gap-2 px-4 py-2 rounded-full"
                     style={{
                       backgroundColor: 'var(--color-bg-primary)40',
@@ -482,7 +482,7 @@ export function HomesPage({ onNavigate }: HomesPageProps) {
                 </div>
 
                 {/* Corner Accent */}
-                <div 
+                <div
                   className="absolute top-0 right-0 w-32 h-32 opacity-20 pointer-events-none"
                   style={{
                     background: `radial-gradient(circle at top right, var(--color-accent), transparent)`,
@@ -501,7 +501,7 @@ export function HomesPage({ onNavigate }: HomesPageProps) {
             >
               <p className="text-sm tracking-wide" style={{ color: 'var(--color-text-muted)' }}>
                 Not sure which option is right for you?{' '}
-                <button 
+                <button
                   onClick={() => onNavigate?.('contact')}
                   className="inline-flex items-center gap-1 group/link"
                   style={{ color: 'var(--color-accent)' }}
@@ -529,7 +529,7 @@ export function HomesPage({ onNavigate }: HomesPageProps) {
             }}
           >
             {/* Animated gradient background */}
-            <div 
+            <div
               className="absolute inset-0 opacity-30 pointer-events-none"
               style={{
                 background: `radial-gradient(circle at 50% 50%, var(--color-accent)20, transparent 70%)`,
@@ -641,11 +641,11 @@ export function HomesPage({ onNavigate }: HomesPageProps) {
             </div>
 
             {/* Corner glow effects - Smaller */}
-            <div 
+            <div
               className="absolute -top-10 -left-10 w-24 h-24 rounded-full opacity-20 blur-3xl pointer-events-none"
               style={{ backgroundColor: 'var(--color-accent)' }}
             />
-            <div 
+            <div
               className="absolute -bottom-10 -right-10 w-24 h-24 rounded-full opacity-20 blur-3xl pointer-events-none"
               style={{ backgroundColor: 'var(--color-accent)' }}
             />

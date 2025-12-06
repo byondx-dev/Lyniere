@@ -9,7 +9,7 @@ interface ScrollTextFillProps {
 
 export function ScrollTextFill({ children, className = "", delay = 0 }: ScrollTextFillProps) {
   const ref = useRef<HTMLSpanElement>(null);
-  
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start 0.8", "start 0.3"]
@@ -17,15 +17,15 @@ export function ScrollTextFill({ children, className = "", delay = 0 }: ScrollTe
 
   // Transform scroll progress to fill percentage with delay
   const fillProgress = useTransform(
-    scrollYProgress, 
-    [0 + delay, 1 + delay], 
+    scrollYProgress,
+    [0 + delay, 1],
     [0, 100]
   );
 
   return (
     <motion.span ref={ref} className={`relative inline-block ${className}`}>
       {/* Base text - outline/muted */}
-      <span 
+      <span
         className="relative"
         style={{
           color: 'var(--color-text-muted)',
@@ -35,7 +35,7 @@ export function ScrollTextFill({ children, className = "", delay = 0 }: ScrollTe
       >
         {children}
       </span>
-      
+
       {/* Fill text - colored overlay */}
       <motion.span
         className="absolute top-0 left-0 overflow-hidden"
@@ -67,7 +67,7 @@ interface ScrollParagraphFillProps {
 
 export function ScrollParagraphFill({ text, className = "" }: ScrollParagraphFillProps) {
   const ref = useRef<HTMLParagraphElement>(null);
-  
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start 0.9", "start 0.4"]

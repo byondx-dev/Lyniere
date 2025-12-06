@@ -37,7 +37,7 @@ export function SmartHomeRoadmap() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeStep, setActiveStep] = useState(0);
   const [isInView, setIsInView] = useState(false);
-  
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start center", "end center"]
@@ -48,7 +48,7 @@ export function SmartHomeRoadmap() {
     const unsubscribe = scrollYProgress.on("change", (latest) => {
       // Section is in view when scrollYProgress is between 0 and 1
       setIsInView(latest > 0 && latest < 1);
-      
+
       const stepIndex = Math.min(
         Math.floor(latest * roadmapSteps.length),
         roadmapSteps.length - 1
@@ -63,43 +63,9 @@ export function SmartHomeRoadmap() {
     <div ref={containerRef} className="relative py-24 lg:py-32">
       {/* Section Header */}
       <div className="text-center mb-32 px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8"
-          style={{
-            backgroundColor: 'var(--color-accent)20',
-            border: '1px solid var(--color-accent)',
-          }}
-        >
-          <div className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: 'var(--color-accent)' }} />
-          <span className="text-xs tracking-widest uppercase" style={{ color: 'var(--color-accent)' }}>
-            Die Evolution des Wohnens
-          </span>
-        </motion.div>
 
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          viewport={{ once: true }}
-          className="text-4xl lg:text-7xl mb-6 tracking-tight"
-        >
-          Smart Home verstehen
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="text-lg lg:text-xl max-w-3xl mx-auto"
-          style={{ color: 'var(--color-text-secondary)' }}
-        >
-          Vier essenzielle Aspekte, die zeigen, warum intelligentes Wohnen
-          mehr ist als Technologie – es ist eine Lebensphilosophie.
-        </motion.p>
+
+
       </div>
 
       {/* Main Roadmap Container */}
@@ -244,7 +210,7 @@ export function SmartHomeRoadmap() {
         <div className="space-y-[40vh]">
           {roadmapSteps.map((step, index) => {
             const Icon = step.icon;
-            
+
             return (
               <motion.div
                 key={index}
@@ -277,7 +243,7 @@ export function SmartHomeRoadmap() {
                           }}
                         >
                           <Icon className="w-9 h-9" style={{ color: step.color }} />
-                          
+
                           {/* Animated Ring */}
                           <motion.div
                             className="absolute inset-0 rounded-full"

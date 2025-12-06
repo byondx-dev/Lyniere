@@ -12,13 +12,13 @@ const cardData = [
     icon: Zap,
     title: "Instant Response",
     description: "Seamless automation that anticipates your needs in real-time",
-    color: "var(--ambient-glow-1)"
+    color: "#2DD4BF"
   },
   {
     icon: Shield,
     title: "Secure & Private",
     description: "Military-grade encryption protecting your home and data",
-    color: "var(--ambient-glow-2)"
+    color: "#F472B6"
   },
   {
     icon: Sparkles,
@@ -73,14 +73,14 @@ export function RoundCards({ onNavigate }: RoundCardsProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {cardData.map((card, index) => {
             const Icon = card.icon;
-            
+
             return (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 60 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true, margin: "-100px" }}
+                viewport={{ once: true }}
                 className="group"
               >
                 <motion.div
@@ -104,7 +104,7 @@ export function RoundCards({ onNavigate }: RoundCardsProps) {
                         whileHover={{ rotate: 360 }}
                         transition={{ duration: 0.8 }}
                       >
-                        <div 
+                        <div
                           className="w-20 h-20 rounded-full glass-panel flex items-center justify-center group-hover:scale-110 transition-transform duration-500"
                         >
                           <Icon className="w-10 h-10" style={{ color: card.color }} strokeWidth={1.5} />
@@ -145,7 +145,7 @@ export function RoundCards({ onNavigate }: RoundCardsProps) {
                     {/* Border glow on hover */}
                     <motion.div
                       className="absolute inset-0 rounded-[3rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                      style={{ 
+                      style={{
                         border: `1px solid ${card.color}`,
                         boxShadow: `0 0 40px ${card.color}20`
                       }}

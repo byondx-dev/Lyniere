@@ -106,11 +106,37 @@ export function ProductCard({
               }}
               className="absolute inset-0"
             >
-              <ImageWithFallback
-                src={images[currentImageIndex].url}
-                alt={`${name} - ${images[currentImageIndex].type}`}
-                className="w-full h-full object-cover"
-              />
+              {images[currentImageIndex].url === "SECTION_PLACEHOLDER" ? (
+                <div className="w-full h-full flex items-center justify-center bg-[var(--color-bg-secondary)] relative overflow-hidden group/placeholder">
+                  {/* Diagonal patterns */}
+                  <div className="absolute inset-0 opacity-10"
+                    style={{
+                      backgroundImage: 'linear-gradient(45deg, var(--color-accent) 25%, transparent 25%, transparent 50%, var(--color-accent) 50%, var(--color-accent) 75%, transparent 75%, transparent)',
+                      backgroundSize: '24px 24px'
+                    }}
+                  />
+
+                  {/* Center Content */}
+                  <div className="relative z-10 text-center">
+                    <div className="w-16 h-16 rounded-full border border-[var(--color-accent)]/30 flex items-center justify-center mx-auto mb-4 bg-[var(--color-bg-primary)]/50 backdrop-blur-sm group-hover/placeholder:scale-110 transition-transform duration-500">
+                      <Home className="w-6 h-6 text-[var(--color-accent)] opacity-60" />
+                    </div>
+                    <span className="text-sm tracking-[0.2em] uppercase text-[var(--color-text-muted)] font-light">
+                      Visualization
+                    </span>
+                  </div>
+
+                  {/* Corner Accents */}
+                  <div className="absolute top-4 left-4 w-2 h-2 border-t border-l border-[var(--color-accent)]/40" />
+                  <div className="absolute bottom-4 right-4 w-2 h-2 border-b border-r border-[var(--color-accent)]/40" />
+                </div>
+              ) : (
+                <ImageWithFallback
+                  src={images[currentImageIndex].url}
+                  alt={`${name} - ${images[currentImageIndex].type}`}
+                  className="w-full h-full object-cover"
+                />
+              )}
 
               {/* Type Badge */}
               <motion.div
@@ -163,7 +189,7 @@ export function ProductCard({
               WebkitBackdropFilter: 'blur(10px)',
             }}
           >
-            <ChevronLeft 
+            <ChevronLeft
               className="w-5 h-5 group-hover:text-[var(--color-accent)] transition-colors"
               style={{ color: 'var(--color-text-primary)' }}
             />
@@ -179,7 +205,7 @@ export function ProductCard({
               WebkitBackdropFilter: 'blur(10px)',
             }}
           >
-            <ChevronRight 
+            <ChevronRight
               className="w-5 h-5 group-hover:text-[var(--color-accent)] transition-colors"
               style={{ color: 'var(--color-text-primary)' }}
             />
@@ -220,7 +246,7 @@ export function ProductCard({
             >
               {tagline}
             </motion.span>
-            
+
             <motion.h3
               className="text-4xl lg:text-5xl mb-4"
               initial={{ opacity: 0, x: -20 }}

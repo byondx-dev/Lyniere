@@ -109,7 +109,7 @@ export function CulturalEditionsSection() {
 
   // State to manage the open feature drawer
   const [openDrawer, setOpenDrawer] = useState(false);
-  const [selectedEdition, setSelectedEdition] = useState(null);
+  const [selectedEdition, setSelectedEdition] = useState<"dojo" | "barakah" | null>(null);
 
   return (
     <div className="mt-48 lg:mt-64 space-y-32 lg:space-y-48">
@@ -166,7 +166,7 @@ export function CulturalEditionsSection() {
       >
         {/* Cyber Grid Background */}
         <div className="absolute inset-0 opacity-20 pointer-events-none overflow-hidden rounded-[4rem]">
-          <div 
+          <div
             className="absolute inset-0"
             style={{
               backgroundImage: `linear-gradient(${dojoColor}20 1px, transparent 1px), linear-gradient(90deg, ${dojoColor}20 1px, transparent 1px)`,
@@ -176,21 +176,21 @@ export function CulturalEditionsSection() {
         </div>
 
         {/* Main Container */}
-        <div 
+        <div
           className="relative overflow-hidden rounded-[4rem] p-1"
           style={{
             background: `linear-gradient(135deg, ${dojoColor}, ${dojoColor}60)`,
           }}
         >
-          <div 
-            className="relative overflow-hidden rounded-[3.8rem] p-12 lg:p-20"
+          <div
+            className="relative overflow-hidden rounded-[3.8rem] p-6 lg:p-20"
             style={{
               backgroundColor: 'var(--color-bg-primary)',
             }}
           >
             {/* Animated Scanlines */}
             <div className="absolute inset-0 pointer-events-none opacity-10">
-              <div 
+              <div
                 className="absolute inset-0"
                 style={{
                   backgroundImage: `repeating-linear-gradient(0deg, ${dojoColor}, ${dojoColor} 1px, transparent 1px, transparent 2px)`,
@@ -209,7 +209,7 @@ export function CulturalEditionsSection() {
                   viewport={{ once: true }}
                   className="relative group w-full"
                 >
-                  <div 
+                  <div
                     className="absolute inset-0 rounded-3xl blur-2xl opacity-60"
                     style={{ backgroundColor: dojoColor }}
                   />
@@ -218,7 +218,7 @@ export function CulturalEditionsSection() {
                     alt={culturalEditions[0].images[0].caption}
                     className="relative w-full h-[400px] object-cover object-center rounded-3xl"
                   />
-                  <div 
+                  <div
                     className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl backdrop-blur-md"
                     style={{
                       backgroundColor: 'var(--color-bg-primary)80',
@@ -246,7 +246,7 @@ export function CulturalEditionsSection() {
                         alt={img.caption}
                         className="w-full h-[200px] object-cover object-center rounded-2xl"
                       />
-                      <div 
+                      <div
                         className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                         style={{
                           background: `linear-gradient(to top, var(--color-bg-primary), transparent)`,
@@ -360,7 +360,7 @@ export function CulturalEditionsSection() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: 0.9 }}
                   viewport={{ once: true }}
-                  className="flex items-center justify-between p-8 rounded-3xl mb-6"
+                  className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 p-6 md:p-8 rounded-3xl mb-6"
                   style={{
                     background: `linear-gradient(135deg, ${dojoColor}15, ${dojoColor}05)`,
                     border: `2px solid ${dojoColor}`,
@@ -371,11 +371,11 @@ export function CulturalEditionsSection() {
                     <p className="text-xs tracking-widest uppercase mb-2" style={{ color: 'var(--color-text-muted)' }}>
                       Starting at
                     </p>
-                    <p className="text-5xl lg:text-6xl" style={{ color: dojoColor }}>
+                    <p className="text-3xl lg:text-6xl" style={{ color: dojoColor }}>
                       {culturalEditions[0].price}
                     </p>
                   </div>
-                  <div className="text-right">
+                  <div className="text-left md:text-right">
                     <p className="text-xs tracking-wide mb-1" style={{ color: 'var(--color-text-muted)' }}>
                       {culturalEditions[0].specs.automation}
                     </p>
@@ -409,11 +409,11 @@ export function CulturalEditionsSection() {
             </div>
 
             {/* Cyber Accents */}
-            <div 
+            <div
               className="absolute top-0 right-0 w-96 h-96 rounded-full opacity-10 blur-[120px] pointer-events-none"
               style={{ backgroundColor: dojoColor }}
             />
-            <div 
+            <div
               className="absolute bottom-0 left-0 w-96 h-96 rounded-full opacity-10 blur-[120px] pointer-events-none"
               style={{ backgroundColor: dojoColor }}
             />
@@ -431,7 +431,7 @@ export function CulturalEditionsSection() {
       >
         {/* Ornate Pattern Background */}
         <div className="absolute inset-0 opacity-5 pointer-events-none overflow-hidden rounded-[4rem]">
-          <div 
+          <div
             className="absolute inset-0"
             style={{
               backgroundImage: `radial-gradient(circle, var(--color-accent) 1px, transparent 1px)`,
@@ -441,20 +441,20 @@ export function CulturalEditionsSection() {
         </div>
 
         {/* Main Container */}
-        <div 
+        <div
           className="relative overflow-hidden rounded-[4rem] p-1"
           style={{
             background: `linear-gradient(135deg, ${barakahColor}, ${barakahColor}80, ${barakahColor}60)`,
           }}
         >
-          <div 
-            className="relative overflow-hidden rounded-[3.8rem] p-12 lg:p-20"
+          <div
+            className="relative overflow-hidden rounded-[3.8rem] p-6 lg:p-20"
             style={{
               backgroundColor: 'var(--color-bg-primary)',
             }}
           >
             {/* Luxury Gradient Overlay */}
-            <div 
+            <div
               className="absolute inset-0 opacity-5 pointer-events-none"
               style={{
                 background: `radial-gradient(circle at 30% 50%, ${barakahColor}, transparent 60%)`,
@@ -560,7 +560,7 @@ export function CulturalEditionsSection() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: 0.9 }}
                   viewport={{ once: true }}
-                  className="flex items-center justify-between p-8 rounded-3xl mb-6"
+                  className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 p-6 md:p-8 rounded-3xl mb-6"
                   style={{
                     background: `linear-gradient(135deg, #D4AF3715, #D4AF3705)`,
                     border: '2px solid #D4AF37',
@@ -571,11 +571,11 @@ export function CulturalEditionsSection() {
                     <p className="text-xs tracking-widest uppercase mb-2" style={{ color: 'var(--color-text-muted)' }}>
                       Starting at
                     </p>
-                    <p className="text-5xl lg:text-6xl" style={{ color: '#D4AF37' }}>
+                    <p className="text-3xl lg:text-6xl" style={{ color: '#D4AF37' }}>
                       {culturalEditions[1].price}
                     </p>
                   </div>
-                  <div className="text-right">
+                  <div className="text-left md:text-right">
                     <p className="text-xs tracking-wide mb-1" style={{ color: 'var(--color-text-muted)' }}>
                       {culturalEditions[1].specs.automation}
                     </p>
@@ -616,7 +616,7 @@ export function CulturalEditionsSection() {
                   viewport={{ once: true }}
                   className="relative group w-full"
                 >
-                  <div 
+                  <div
                     className="absolute inset-0 rounded-3xl blur-2xl opacity-40"
                     style={{ backgroundColor: '#D4AF37' }}
                   />
@@ -625,7 +625,7 @@ export function CulturalEditionsSection() {
                     alt={culturalEditions[1].images[0].caption}
                     className="relative w-full h-[400px] object-cover object-center rounded-3xl"
                   />
-                  <div 
+                  <div
                     className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl backdrop-blur-md"
                     style={{
                       backgroundColor: 'var(--color-bg-primary)80',
@@ -653,7 +653,7 @@ export function CulturalEditionsSection() {
                         alt={img.caption}
                         className="w-full h-[200px] object-cover object-center rounded-2xl"
                       />
-                      <div 
+                      <div
                         className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                         style={{
                           background: `linear-gradient(to top, var(--color-bg-primary), transparent)`,
@@ -672,11 +672,11 @@ export function CulturalEditionsSection() {
             </div>
 
             {/* Gold Glow Accents */}
-            <div 
+            <div
               className="absolute top-0 left-0 w-96 h-96 rounded-full opacity-10 blur-[120px] pointer-events-none"
               style={{ backgroundColor: '#D4AF37' }}
             />
-            <div 
+            <div
               className="absolute bottom-0 right-0 w-96 h-96 rounded-full opacity-10 blur-[120px] pointer-events-none"
               style={{ backgroundColor: '#D4AF37' }}
             />
@@ -707,7 +707,7 @@ export function CulturalEditionsSection() {
       <CulturalFeaturesDrawer
         isOpen={openDrawer}
         onClose={() => setOpenDrawer(false)}
-        edition={selectedEdition}
+        edition={selectedEdition as "dojo" | "barakah"}
       />
     </div>
   );

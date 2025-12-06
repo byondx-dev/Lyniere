@@ -19,7 +19,7 @@ export function ModernFooter() {
               <br />
               <span className="text-stroke-fill">Together</span>
             </h2>
-            
+
             <motion.button
               whileHover={{ scale: 1.05, x: 10 }}
               whileTap={{ scale: 0.95 }}
@@ -55,7 +55,7 @@ export function ModernFooter() {
                 <span className="text-xs tracking-[0.3em] uppercase block mb-6" style={{ color: 'var(--color-text-muted)' }}>
                   Explore
                 </span>
-                {['Capabilities', 'Projects', 'Process', 'Insights'].map((link) => (
+                {['Homes', 'Contact'].map((link) => (
                   <motion.a
                     key={link}
                     href="#"
@@ -98,7 +98,7 @@ export function ModernFooter() {
                   type="email"
                   placeholder="Your email"
                   className="flex-1 bg-transparent pb-3 focus:outline-none transition-colors"
-                  style={{ 
+                  style={{
                     borderBottom: '1px solid var(--color-border)',
                     color: 'var(--color-text-secondary)'
                   }}
@@ -125,7 +125,7 @@ export function ModernFooter() {
           className="flex flex-col md:flex-row justify-between items-center gap-8 pt-12"
           style={{ borderTop: '1px solid var(--color-border)' }}
         >
-          <div className="text-9xl tracking-wider" style={{ color: 'var(--color-bg-secondary)' }}>
+          <div className="text-9xl tracking-wider select-none" style={{ color: 'var(--color-text-muted)', opacity: 0.1 }}>
             LYNIÈRE
           </div>
 
@@ -139,7 +139,7 @@ export function ModernFooter() {
 
       {/* Floating element */}
       <motion.div
-        className="absolute right-1/4 bottom-1/4 w-64 h-64 opacity-5 pointer-events-none"
+        className="absolute right-1/4 bottom-1/4 w-64 h-64 opacity-15 pointer-events-none"
         animate={{
           rotate: 360,
           scale: [1, 1.1, 1]

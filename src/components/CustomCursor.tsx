@@ -4,11 +4,11 @@ import { useEffect, useState } from "react";
 export function CustomCursor() {
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
-  
-  const springConfig = { damping: 25, stiffness: 200 };
-  const cursorXSpring = useSpring(cursorX, springConfig);
-  const cursorYSpring = useSpring(cursorY, springConfig);
-  
+
+  // const springConfig = { damping: 25, stiffness: 200 };
+  // const cursorXSpring = useSpring(cursorX, springConfig);
+  // const cursorYSpring = useSpring(cursorY, springConfig);
+
   const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
@@ -41,8 +41,8 @@ export function CustomCursor() {
       <motion.div
         className="fixed top-0 left-0 w-4 h-4 pointer-events-none z-[99999] mix-blend-difference"
         style={{
-          x: cursorXSpring,
-          y: cursorYSpring,
+          x: cursorX,
+          y: cursorY,
           translateX: '-50%',
           translateY: '-50%',
         }}
@@ -60,8 +60,8 @@ export function CustomCursor() {
       <motion.div
         className="fixed top-0 left-0 w-10 h-10 pointer-events-none z-[99998] mix-blend-difference"
         style={{
-          x: cursorXSpring,
-          y: cursorYSpring,
+          x: cursorX,
+          y: cursorY,
           translateX: '-50%',
           translateY: '-50%',
         }}
